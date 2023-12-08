@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+.mainBody {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 222;
+}
+.back{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+}
+.container {
+    width: 1390px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.nav-bar {
+    padding-top: 30px;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.filter {
+    width: 600px;
+    height: 100px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-box {
+    width: 110px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+}
+
+.cards {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    width: 15%;
+    height: auto;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.movie_name {
+    color: #fff;
+    margin-left: 20px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.imgDiv img {
+    width: 100%;
+    height: 100%;
+}
+.imgDiv{
+    width: 100%;
+    height:  270px;
+    border-radius: 17px;
+    overflow: hidden;
+    transition: .8s;
+
+}
+.card img:hover{
+    transform: scale(1.2);
+    transform-origin: top left;
+    transition: .8s;
+}
+.active {
+    background-color: rgb(0, 110, 255);
+    color: #fff;
+}
+.modal{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(46, 46, 46, 0.742);
+    position: fixed;  
+    z-index: 65651;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -100%;
+}
+.modal.repeat{
+    right: 0;
+    transition: .7s;
+}
+.modalBlog{
+    width: 60%;
+    height: 60vh;
+    background-color: orange;
+    border-radius: 15px;
+}
+#Xbtn{
+    color: #fff;
+    font-size: 19px;
+    margin-left: 97%;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.modalMain{
+    width: 100%;
+    height: 98%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.left-modal{
+    width: 45%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-modal{
+    width: 55%;
+    height: auto;
+    padding: 0 30px;
+}
+.left-modal img{
+    width: 50%;
+    height: 290px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.modal_name{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.modal_about{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+.modal_overview{
+    width: 100%;
+    height: 80px;
+    overflow: auto;
+    color: #fff;
+}
+.overwiev_name{
+    color: #fff;
+    margin-top: 10px;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:1200px) {
+    .card{
+        width: 19%;
+    }
+}
+@media  screen and (max-width:768px) {
+    .cards{
+        max-width: 768px;
+    }
+    .card{
+        width: 23%;
+    }
+    .imgDiv{
+        height: 210px;
+    }
+    .movie_name{
+        font-size: 16px;
+    }
+    .filter{
+        width: 100%;
+        padding: 0 30px;
+    }
+    
+}
+@media  screen and (max-width:452px){
+    body{
+        width: 412px;
+    }
+    .container{
+        width: 390px;
+    }
+    .cards{
+        width: 402px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .card{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 20px;
+    }
+    .imgDiv{
+        width: 70%;
+        height: 270px;
+    }
+    .movie_name{
+        font-size: 14px;
+    }
+    .filter{
+        width: 100%;
+        padding: 0 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .nav-bar {
+        padding-top: 30px;
+        width: 410px;
+        height: 100px;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+    }
+    .filter-box{
+        width: 45%;
+    }
+    .back{
+        min-width: 412px;
+    }
+}
